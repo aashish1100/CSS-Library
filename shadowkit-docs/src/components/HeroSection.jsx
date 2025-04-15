@@ -7,7 +7,6 @@ export default function HeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-screen text-center bg-[var(--background)] text-[var(--foreground)] overflow-hidden px-6 py-24">
       
-      {/* Background blobs */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1.05 }}

@@ -5,7 +5,6 @@ export default function Footer() {
     <footer className="bg-[var(--background)] text-[var(--foreground)] border-t border-[var(--color-foreground)] py-14 mt-24">
       <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
         
-        {/* Left Side */}
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-center md:text-left">
           <span className="text-[var(--color-primary)] font-heading text-3xl font-bold">
             ShadowKit
@@ -15,7 +14,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Right Side */}
         <div className="flex gap-10 text-sm">
           <Link
             href="#privacy"

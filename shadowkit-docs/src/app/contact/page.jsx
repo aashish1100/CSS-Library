@@ -20,7 +20,6 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Placeholder for form submission logic (API call, etc.)
     setTimeout(() => {
       setIsSubmitting(false);
       alert("Your message has been sent!");
@@ -36,7 +35,6 @@ export default function Contact() {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Name */}
           <div>
             <label
               htmlFor="name"
@@ -56,7 +54,6 @@ export default function Contact() {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label
               htmlFor="email"
@@ -76,7 +73,6 @@ export default function Contact() {
             />
           </div>
 
-          {/* Message */}
           <div>
             <label
               htmlFor="message"
@@ -96,7 +92,6 @@ export default function Contact() {
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             disabled={isSubmitting}
