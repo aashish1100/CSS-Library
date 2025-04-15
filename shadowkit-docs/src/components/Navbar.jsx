@@ -18,9 +18,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-[var(--background)/80] backdrop-blur-lg shadow-lg z-50">
+    <header className="fixed top-0 left-0 right-0 bg-[var(--background)/80] backdrop-blur-xl shadow-lg z-50">
       <nav className="flex justify-between items-center px-6 py-4 max-w-screen-xl mx-auto">
-        {/* Logo */}
         <Link
           href="/"
           className="text-[var(--color-primary)] font-heading text-3xl font-bold tracking-tight hover:opacity-90 transition-opacity duration-300"
@@ -28,8 +27,7 @@ export default function Navbar() {
           ShadowKit
         </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden sm:flex space-x-8">
+        <div className="hidden sm:flex space-x-10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -42,7 +40,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
           className="sm:hidden p-2 rounded-md text-[var(--foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] hover:bg-[var(--color-muted)] transition-all duration-300"
@@ -52,7 +49,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -60,14 +56,14 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="sm:hidden bg-[var(--background)] backdrop-blur-lg shadow-md px-6 py-4 space-y-4"
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="sm:hidden bg-[var(--background)] backdrop-blur-xl shadow-xl px-6 py-6 space-y-6 rounded-b-2xl"
           >
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block text-[var(--foreground)] hover:text-[var(--color-primary)] transition-colors duration-300 text-lg"
+                className="block text-[var(--foreground)] hover:text-[var(--color-primary)] transition-colors duration-300 text-lg font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
