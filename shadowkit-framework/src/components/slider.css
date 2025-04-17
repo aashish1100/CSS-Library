@@ -1,0 +1,113 @@
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Max width of slider */
+    margin: 0 auto;
+    overflow: hidden; /* Hides content outside of the slider */
+    border-radius: 10px; /* Optional for rounded corners */
+  }
+  
+  /* Slider */
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    min-width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  /* Navigation Buttons */
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .slider-nav.prev {
+    left: 10px;
+  }
+  
+  .slider-nav.next {
+    right: 10px;
+  }
+  
+  /* Add hover effects for navigation */
+  .slider-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Autoplay - CSS only solution using :checked and label */
+  @keyframes slide-animation {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(-400%); }
+  }
+  
+  /* Automatically slide with a defined duration */
+  .slider {
+    animation: slide-animation 20s infinite;
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .slider-container {
+      background-color: #333;
+    }
+    .slider-nav {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+  
+  /* Utility classes for spacing and alignment */
+  .m-0 { margin: 0; }
+  .mt-2 { margin-top: 2rem; }
+  .p-4 { padding: 1rem; }
+  .text-center { text-align: center; }
+  
+
+  /* Full-Screen Slider */
+.slider-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  
+  /* Dots Navigation */
+.dots {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dot.active {
+    background-color: #717171;
+  }
+  

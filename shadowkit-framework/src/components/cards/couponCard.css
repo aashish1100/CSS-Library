@@ -1,0 +1,51 @@
+.coupon {
+    background-image: url('freepik-untitled-project-20250415173020mkve.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    padding: 2rem;
+    color: rgb(14, 1, 1);
+    max-width: 350px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  
+    display: flex;
+    justify-content: flex-end; /* 👈 Push content to right */
+    align-items: center;       /* 👈 Vertically center it */
+    height: 200px;             /* You can adjust height */
+  }
+  
+  .coupon:hover {
+    transform: scale(1.03);
+  }
+  
+  .coupon-content {
+    text-align: right; /* 👈 Right-align the text */
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 70%;    /* Optional: keep text from stretching too wide */
+  }
+  
+  .coupon-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .coupon-desc {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+  
+  .coupon-code {
+    display: inline-block;
+    margin-top: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+
+  

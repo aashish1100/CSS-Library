@@ -1,0 +1,120 @@
+:root {
+    --font-base: 'Segoe UI', sans-serif;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+  
+    --text-base: #333;
+    --text-heading: #111;
+    --text-muted: #666;
+  
+    --bg-surface: #fff;
+    --bg-muted: #f5f5f5;
+    --bg-dark: #1a1a1a;
+  
+    --border-color: #e0e0e0;
+    --accent: #5e60ce;
+    --accent-hover: #4a4ebf;
+  
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .table--classic {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  
+  .table--classic th, .table--classic td {
+    padding: var(--spacing-sm);
+    text-align: left;
+    border: 1px solid var(--border-color);
+  }
+  
+  .table--classic th.sortable:hover {
+    cursor: pointer;
+    color: var(--accent);
+  }
+  
+  .table--classic tbody tr:hover {
+    background-color: var(--bg-muted);
+  }
+  .table--shadowed {
+    width: 100%;
+    border-spacing: 0;
+    font-size: 1rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--bg-surface);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .table--shadowed th, .table--shadowed td {
+    padding: var(--spacing-md);
+    text-align: left;
+  }
+  
+  .table--shadowed thead {
+    background-color: var(--bg-muted);
+  }
+  
+  .table--shadowed tbody tr {
+    transition: background-color 0.2s ease;
+  }
+  
+  .table--shadowed tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+  .table--striped {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  
+  .table--striped th, .table--striped td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .table--striped tbody tr:nth-child(even) {
+    background-color: var(--bg-muted);
+  }
+  
+  .table--striped th {
+    background-color: var(--bg-surface);
+    color: var(--text-heading);
+    font-weight: bold;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-surface: #1e1e1e;
+      --bg-muted: #2a2a2a;
+      --text-base: #f0f0f0;
+      --text-heading: #ffffff;
+      --border-color: #3a3a3a;
+    }
+  }
+  .table-pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: var(--spacing-md);
+    gap: var(--spacing-sm);
+  }
+  
+  .pagination-button {
+    background-color: var(--accent);
+    color: #fff;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .pagination-button:hover {
+    background-color: var(--accent-hover);
+  }
+  

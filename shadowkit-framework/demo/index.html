@@ -1,34 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../src/base.css">
-</head>
-<body>
-    <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 bg-primary">
-            <div class="bg-orange">
-                <h3>Card 1</h3>
-                <p>Description</p>
-            </div>
-            <div class="bg-orange">
-                <h3>Card 1</h3>
-                <p>Description</p>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 bg-secondary">
-               <h3>Card 2</h3>
-                <p>Description</p>
-        </div>
-        <div class="col-12 col-md-6 col-lg-4 bg-danger">
-            <h3>Card 3</h3>
-             <p>Description</p>
-     </div>
-     
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecommerce</title>
+     
+        <link rel="stylesheet" href="style2.css">
+
+       <link rel="stylesheet" href="../src/base.css">
+    </head>
+  
+    <body>
+      <nav class="navbar">
+        <a href="#" class="navbar-brand">MyFramework</a>
+        <button class="navbar-toggle" onclick="toggleNavbar()">☰</button>
+        <div class="navbar-links" id="navbarLinks">
+          <a href="#">Home</a>
+          <a href="#">Docs</a>
+          <a href="#">Components</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      
+
+       <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super Value Deals</h2>
+        <h1>On all Products</h1>
+        <p>Save more with Coupons & up to 70% off!</p>
+         <button class="normal">Shop now</button>
+     </section>
+
+     <section id="feture" class="section-p1  ">
+      
+            <div class="fe-box">
+              <img src="img/features/f1.png" alt="">
+              <h6>Free Shiping</h6>
+          </div>
+          <div class="fe-box">
+              <img src="img/features/f2.png" alt="">
+              <h6>Online Order</h6>
+          </div>
+          <div class="fe-box">
+              <img src="img/features/f3.png" alt="">
+              <h6>Save Money</h6>
+          </div>
+          <div class="fe-box">
+              <img src="img/features/f4.png" alt="">
+              <h6>Promotions</h6>
+          </div>
+          <div class="fe-box">
+              <img src="img/features/f5.png" alt="">
+              <h6>Happy Sell</h6>
+          </div>
+          <div class="fe-box">
+              <img src="img/features/f6.png" alt="">
+              <h6>F24/7 Support</h6>
+          </div>
+      
+     </section>
+
+
+     <section>
+      
+      <div class="card-grid d-flex justify-center mt-5 ">
+        <div class="card">
+          <img src="./img/products/f1.jpg" class="card-img-top" alt="Nature">
+          <div class="card-body">
+            <h5 class="card-title">Tranquil Escape</h5>
+            <p class="card-text">Explore the calm and serene beauty of nature with our exclusive eco-tour plans.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success">Discover</button>
+          </div>
+        </div>
+      
+        <div class="card d-flex">
+          <img src="./img/products/f2.jpg" class="card-img-top" alt="Tech">
+          <div class="card-body">
+            <h5 class="card-title">Tech Future</h5>
+            <p class="card-text">Dive into the latest tech trends and gadgets shaping tomorrow’s world today.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success">Read More</button>
+          </div>
+        </div>
+      
+        <div class="card">
+          <img src="./img/products/f2.jpg" class="card-img-top" alt="Food">
+          <div class="card-body">
+            <h5 class="card-title">Flavors of Italy</h5>
+            <p class="card-text">A culinary journey through the heart of Italy with mouth-watering dishes and recipes.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success">Taste Now</button>
+          </div>
+        </div>
+      
+        <div class="card">
+          <img src="./img/products/f3.jpg" class="card-img-top" alt="Travel">
+          <div class="card-body">
+            <h5 class="card-title">Adventure Awaits</h5>
+            <p class="card-text">Pack your bags and explore thrilling destinations and experiences across the globe.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success">Book Now</button>
+          </div>
+        </div>
+      </div>
+     </section>
+
+     <section>
+      <div class="card-grid d-flex mt-5 justify-center ">
+      <div class="coupon w-50">
+        <div class="coupon-content">
+          <h3 class="coupon-title">20% OFF</h3>
+          <p class="coupon-desc">On your next purchase</p>
+          <span class="coupon-code">Use Code: SAVE20</span>
+        </div>
       </div>
       
-</body>
+      <div class="gift-card w-50">
+        <div class="gift-card-text">
+          Gift Card<br>
+          ₹1000<br>
+          <span class="small">ID: GIFT-9921</span>
+        </div>
+      </div>
+      
+      <div class="valentine-card w-50">
+        <div class="valentine-text">
+          Happy Valentine's Day 💖<br />
+          <span class="small">You're Special!</span>
+        </div>
+      </div>
+      </div>
+
+     </section>
+     
+     <footer class="footer mt-5 bg-secondary">
+      <div class="footer-container">
+    
+        <div class="footer-column">
+          <h4>About Us</h4>
+          <p>We are building a lightweight CSS framework for modern web development. Simple, fast, and flexible.</p>
+        </div>
+    
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Docs</a></li>
+            <li><a href="#">Components</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-column">
+          <h4>Follow Us</h4>
+          <ul>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+    
+      </div>
+    
+      <div class="footer-bottom">
+        &copy; 2025 YourFramework. All rights reserved.
+      </div>
+    </footer>
+    
+
+    </body>
+
 </html>

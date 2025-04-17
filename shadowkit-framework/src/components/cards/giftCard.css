@@ -1,0 +1,36 @@
+.gift-card {
+  background-image: url('elegant-background-perfect-black-friday.jpg'); /* Replace with your actual image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 350px;
+  height: 200px;
+  color: white;
+  position: relative;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.gift-card:hover {
+  transform: scale(1.03);
+}
+
+.gift-card-text {
+  z-index: 1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.4;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4); /* Makes white text readable on image */
+}
+
+.gift-card-text .small {
+  font-size: 1rem;
+  font-weight: normal;
+}

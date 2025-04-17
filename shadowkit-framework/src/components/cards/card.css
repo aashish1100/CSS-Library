@@ -1,0 +1,147 @@
+@import url("couponCard.css");
+@import url("giftCard.css");
+@import url('valentine.css');
+@import url('feture.css');
+
+/* ... Place this at top of your CSS ... */
+/* Common card styles from previous messages remain same */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+  
+  .card-header, .card-footer {
+    padding: 0.75rem 1rem;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .card-img-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .card-horizontal {
+    flex-direction: row;
+  }
+  
+  .card-horizontal img {
+    width: 40%;
+    object-fit: cover;
+  }
+  
+  .card-outline {
+    border: 1px dashed #aaa;
+  }
+  
+  .list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .list-group li {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .card-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-color: #333;
+  }
+  body.dark-mode .card-header,
+  body.dark-mode .card-footer {
+    background-color: #2c2c2c;
+    border-color: #444;
+  }
+    
+  .FreeShipping {
+    background-image: url('./features/f1.png');
+    background-size: cover;
+    background-position: center;
+    color: white; /* Optional: for better readability */
+    padding: 20px;
+  }
+  
+  .OnlineOrder {
+    background-image: url('online-order.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .SaveMoney {
+    background-image: url('save-money.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .Promotions {
+    background-image: url('promotions.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .HappySell {
+    background-image: url('happy-sell.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+  }
+  
+  .Support24_7 {
+    background-image: url('support.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+  }
+  
