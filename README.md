@@ -9,18 +9,10 @@ ShadowKit is a minimal and elegant custom CSS framework. This library helps you 
 
 Paste the following line in your `<head>` tag of the HTML file:
 
-https://cdn.jsdelivr.net/gh/aashish1100/CSS-Library@main/shadowkit-framework/src/base.css
+https://cdn.jsdelivr.net/gh/aashish1100/CSS-Library@latest/shadowkit-framework/src/base.css
 
 ✅ This will apply styles to your entire webpage.
 
-## 🌈 Features
-
-- 🎨 Predefined dark background with light text
-- 🧩 Utility classes for rapid UI building
-- 📱 Responsive design-ready structure
-- 🌗 Dark mode foundation
-
----
 
 ## 🧪 Quick Start
 
