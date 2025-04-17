@@ -2,9 +2,10 @@
 @import url("./components/components.css");
 @import url("./utilities/utilities.css");
 
-.bg-dark h3,
-.bg-dark p {
+
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
