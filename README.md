@@ -8,9 +8,10 @@ ShadowKit is a minimal and elegant custom CSS framework. This library helps you 
 
 
 Paste the following line in your `<head>` tag of the HTML file:
+
 https://cdn.jsdelivr.net/gh/aashish1100/CSS-Library@main/shadowkit-framework/src/base.css
 
-✅ This will apply LumosUI styles to your entire webpage.
+✅ This will apply styles to your entire webpage.
 
 ## 🌈 Features
 
