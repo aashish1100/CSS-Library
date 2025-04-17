@@ -1,182 +1,92 @@
 export default function SliderDocs() {
+  const slides = [
+    { id: 1, label: 'Slide One' },
+    { id: 2, label: 'Slide Two' },
+    { id: 3, label: 'Slide Three' },
+  ];
+
   return (
-    <section className="px-4 py-12 md:px-16 md:py-20 bg-[var(--background)] text-[var(--foreground)] space-y-16">
-      <div className="text-center space-y-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-[var(--color-primary)]">Slider</h2>
-        <p className="text-lg text-[var(--muted-foreground)] max-w-2xl mx-auto">
-          A fully responsive, interactive slider component with autoplay, navigation buttons, dots navigation, and dark mode support. Highly customizable with various layout options.
+    <section className="px-4 py-8 sm:py-12 md:px-16 md:py-20 bg-[var(--background)] text-[var(--foreground)] space-y-12 sm:space-y-16">
+      {/* Header */}
+      <div className="text-center space-y-3 sm:space-y-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[var(--color-primary)]">
+          Slider
+        </h2>
+        <p className="text-base sm:text-lg text-[var(--muted-foreground)] max-w-xl sm:max-w-2xl mx-auto">
+          A fully responsive, interactive slider with autoplay, navigation buttons, dots navigation, and dark mode support. Highly customizable.
         </p>
       </div>
 
-      <div className="space-y-4">
-        <h3 className="text-2xl font-semibold">🧩 Installation</h3>
-        <ul className="list-decimal list-inside space-y-2 text-[var(--muted-foreground)]">
-          <li>
-            Add the CSS:
-            <pre className="bg-[#111] text-white text-sm p-4 rounded-lg mt-2 overflow-x-auto shadow-inner">
-              <code>{`<link rel="stylesheet" href="path/to/your/styles.css">`}</code>
-            </pre>
-          </li>
-          <li>
-            Add the slider markup:
-            <pre className="bg-[#111] text-white text-sm p-4 rounded-lg mt-2 overflow-x-auto shadow-inner">
-              <code>{`<div class="slider-container">
-  <div class="slider">
-    <div class="slide">
-      <img src="image1.jpg" alt="Slide 1">
-    </div>
-    <div class="slide">
-      <img src="image2.jpg" alt="Slide 2">
-    </div>
-    <div className="slide">
-      <img src="image3.jpg" alt="Slide 3">
-    </div>
-  </div>
-
-  <!-- Navigation Buttons -->
-  <button class="slider-nav prev">&#10094;</button>
-  <button class="slider-nav next">&#10095;</button>
-
-  <!-- Dots Navigation -->
-  <div class="dots">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-</div>`}</code>
-            </pre>
-          </li>
-        </ul>
-      </div>
-
-      <div className="space-y-10">
-        <h3 className="text-2xl font-semibold">🎨 Design Variants</h3>
-
-        <div className="space-y-3">
-          <h4 className="text-xl font-semibold">1. Full-Screen Slider</h4>
-          <p className="text-[var(--muted-foreground)]">Takes up the entire screen height and width for a visually impactful display.</p>
-          <div className="slider-container full-screen">
-            <div className="slider">
-              <div className="slide">
-                <img src="image1.jpg" alt="Slide 1" />
-              </div>
-              <div className="slide">
-                <img src="image2.jpg" alt="Slide 2" />
-              </div>
-              <div className="slide">
-                <img src="image3.jpg" alt="Slide 3" />
-              </div>
+      {/* Slider Container */}
+      <div className="relative">
+        {/* Slides Wrapper */}
+        <div className="slider flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+          {slides.map(slide => (
+            <div
+              key={slide.id}
+              className="slide snap-center flex-shrink-0 w-full h-48 sm:h-64 md:h-80 bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-xl sm:text-2xl md:text-3xl font-semibold text-[var(--muted-foreground)]"
+            >
+              {slide.label}
             </div>
-          </div>
+          ))}
         </div>
 
-        <div className="space-y-3">
-          <h4 className="text-xl font-semibold">2. Slider with Dots Navigation</h4>
-          <p className="text-[var(--muted-foreground)]">Navigate between slides by clicking on the dots.</p>
-          <div className="slider-container">
-            <div className="slider">
-              <div className="slide">
-                <img src="image1.jpg" alt="Slide 1" />
-              </div>
-              <div className="slide">
-                <img src="image2.jpg" alt="Slide 2" />
-              </div>
-              <div className="slide">
-                <img src="image3.jpg" alt="Slide 3" />
-              </div>
-            </div>
-            <div className="dots">
-              <span className="dot"></span>
-              <span className="dot"></span>
-              <span className="dot"></span>
-            </div>
-          </div>
+        {/* Navigation Buttons */}
+        <button
+          className="slider-nav prev absolute left-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-[var(--color-primary)] text-white text-lg shadow-md"
+          aria-label="Previous slide"
+        >
+          &#10094;
+        </button>
+        <button
+          className="slider-nav next absolute right-2 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-[var(--color-primary)] text-white text-lg shadow-md"
+          aria-label="Next slide"
+        >
+          &#10095;
+        </button>
+
+        {/* Dots Navigation */}
+        <div className="dots flex justify-center mt-4 space-x-2">
+          {slides.map((slide, idx) => (
+            <span
+              key={slide.id}
+              className={`dot w-3 h-3 rounded-full ${idx === 0 ? 'bg-[var(--color-primary)]' : 'bg-[var(--muted-foreground)]'}`}
+            ></span>
+          ))}
         </div>
       </div>
 
+      {/* Features & Notes */}
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold">📱 Responsive Design</h3>
+        <h3 className="text-xl sm:text-2xl font-semibold">📱 Responsive Design</h3>
         <p className="text-[var(--muted-foreground)]">
-          The Slider component is fully responsive and adapts seamlessly across different screen sizes.
+          The slider is built mobile-first, with swipe support and adjustable heights per breakpoint.
         </p>
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold">🎨 Features</h3>
-        <ul className="text-sm text-[var(--muted-foreground)] list-disc list-inside">
-          <li><code>.slider</code>: Adjust the transition and animation for the slider.</li>
-          <li><code>.slider-nav</code>: Customize the navigation buttons.</li>
-          <li><code>.dot</code>: Customize the appearance of the dots navigation.</li>
-        </ul>
-        <pre className="bg-[#111] text-white text-sm p-4 rounded-lg shadow-inner">
-          <code>{`.slider {
-  animation: slide-animation 20s infinite;
-}`}</code>
-        </pre>
-        <pre className="bg-[#111] text-white text-sm p-4 rounded-lg shadow-inner">
-          <code>{`@media (prefers-color-scheme: dark) {
-  .slider-container {
-    background-color: #333;
-  }
-  .slider-nav {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-}`}</code>
-        </pre>
-      </div>
-
-      <div className="space-y-6">
-        <h3 className="text-2xl font-semibold">🚀 Example Usage</h3>
-        <div className="slider-container">
-          <div className="slider">
-            <div className="slide">
-              <img src="image1.jpg" alt="Slide 1" />
-            </div>
-            <div className="slide">
-              <img src="image2.jpg" alt="Slide 2" />
-            </div>
-            <div className="slide">
-              <img src="image3.jpg" alt="Slide 3" />
-            </div>
-          </div>
-          <button className="slider-nav prev">&#10094;</button>
-          <button className="slider-nav next">&#10095;</button>
-          <div className="dots">
-            <span className="dot"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </div>
-        </div>
-      </div>
-
-      <div className="space-y-6">
-        <h3 className="text-2xl font-semibold">🔧 Utility Classes</h3>
-        <ul className="text-sm text-[var(--muted-foreground)] list-disc list-inside">
-          <li><code>.m-0</code>: Removes margin.</li>
-          <li><code>.p-1</code>: Adds padding.</li>
-          <li><code>.text-center</code>: Centers the text inside the element.</li>
-          <li><code>.flex</code>: Displays the element as a flex container.</li>
+        <h3 className="text-xl sm:text-2xl font-semibold">🎨 Features</h3>
+        <ul className="text-sm sm:text-base text-[var(--muted-foreground)] list-disc list-inside space-y-1">
+          <li><code>.slider</code>: Flex container with snap points for smooth swiping.</li>
+          <li><code>.slider-nav</code>: Absolute-positioned nav buttons, hidden on small if desired.</li>
+          <li><code>.dot</code>: Indicates current slide; customizable colors.</li>
         </ul>
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold">🌍 Browser Support</h3>
-        <p className="text-[var(--muted-foreground)]">
-          The Slider component works seamlessly across modern browsers:
-        </p>
-        <ul className="text-sm text-[var(--muted-foreground)] list-disc list-inside">
-          <li>Chrome</li>
-          <li>Firefox</li>
-          <li>Safari</li>
-          <li>Edge</li>
+        <h3 className="text-xl sm:text-2xl font-semibold">🔧 Utility Classes</h3>
+        <ul className="text-sm sm:text-base text-[var(--muted-foreground)] list-disc list-inside space-y-1">
+          <li><code>snap-x</code>, <code>snap-center</code>: Enables native scroll snapping.</li>
+          <li><code>overflow-x-auto</code>: Scrollable container for mobile swiping.</li>
+          <li><code>scroll-smooth</code>: Smooth transitions when navigating programmatically.</li>
         </ul>
       </div>
 
       <div className="space-y-6">
-        <h3 className="text-2xl font-semibold">📋 Notes</h3>
-        <ul className="text-sm text-[var(--muted-foreground)] list-disc list-inside">
-          <li>Consider providing fallbacks for browsers that don't support certain CSS properties, like the backdrop-filter in the glass effect.</li>
-          <li>For better accessibility, add <code>aria-label</code> to the navigation buttons.</li>
+        <h3 className="text-xl sm:text-2xl font-semibold">📋 Notes</h3>
+        <ul className="text-sm sm:text-base text-[var(--muted-foreground)] list-disc list-inside space-y-1">
+          <li>Add <code>aria-live="polite"</code> or screen-reader announcements for accessibility.</li>
+          <li>Consider hiding nav buttons on touch devices or showing on hover for larger screens.</li>
         </ul>
       </div>
     </section>
